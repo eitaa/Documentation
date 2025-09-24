@@ -421,9 +421,9 @@ code {
   display: none !important;
 }
 
-.theme-edit-this-page {
-  display: none;
-}
+/*.theme-edit-this-page {*/
+/*  display: none;*/
+/*}*/
 
 body {
   overflow-x: hidden;
