@@ -1,0 +1,118 @@
+.info-card {
+    border: 1.5px solid #ececec;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10), 0 2px 8px 0 rgba(0,0,0,0.06);
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+    background: #fff;
+    font-family: 'Bakh', 'Vazir', sans-serif;
+  }
+  .info-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border: 1.5px solid #ff9800;
+  }
+  .info-card-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .info-card-title {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: black;
+    letter-spacing: -0.5px;
+  }
+  .info-card-icon {
+    background: #f8f8f8;
+    color: #ff8100;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info-card-desc {
+    color: #444;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  .info-card-btn {
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 7px 18px;
+    background:#0001;
+    color: rgb(27, 27, 27);
+    margin-top: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .info-card-btn:hover {
+    background: rgba(0, 0, 0, 0.116)
+  }
+  
+  [data-theme="dark"] .info-card {
+    background: linear-gradient(45deg, #222, #181818);
+    border: 1.5px solid #fff1;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.30), 0 2px 8px 0 rgba(0,0,0,0.18);
+    color: #eee;
+  }
+  [data-theme="dark"] .info-card:hover {
+    border: 1.5px solid #ff9800;
+  }
+  [data-theme="dark"] .info-card-title {
+    color: white;
+  }
+  [data-theme="dark"] .info-card-desc {
+    color: #eee;
+  }
+  [data-theme="dark"] .info-card-icon {
+    background: #111;
+    color: #ff8100;
+  }
+  [data-theme="dark"] .info-card-btn {
+    background: #b6b6b6;
+    color: #222;
+    box-shadow: 0 2px 8px 0 rgba(255,179,0,0.10);
+  }
+  [data-theme="dark"] .info-card-btn:hover {
+    background: #d3d3d3;
+  
+  }
+  
+  .info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 900px) {
+    .info-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .info-card-grid {
+      grid-template-columns: 1fr;
+    }
+    .info-card {
+      padding: 10px;
+      min-height: 120px;
+    }
+  }
+  

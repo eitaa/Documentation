@@ -1,0 +1,86 @@
+import InfoCard from '@site/src/components/InfoCard/InfoCard';
+import Hero from '../src/components/Hero/Hero';
+import HeroButtons from '../src/components/Hero/HeroButtons';
+
+import {
+  SvgNoteBook,
+  SvgFlame,
+  SvgPanel,
+  SvgLightbulb,
+  SvgQuestion,
+  SvgBug
+} from '../src/components/svg';
+
+# خانه
+## برنامه برنامک چیست و چه قابلیت‌هایی دارد؟
+
+
+<Hero />
+
+##  تفاوت "برنامه" و "برنامک"
+
+## برنامه  :
+>**بستری برای اجرای اپلیکیشن‌ مبتنی بر وب به صورت مستقیم و بدون نیاز به نصب ، درون پیام‌رسان ایتا با امکانات ویژه**
+
+## برنامک :
+>**بستری برای ارائه اپلیکیشن های مبتنی بر وب زیر مجموعه برنامه به صورت لینک ایتا**
+
+
+---
+<HeroButtons/>
+
+{(() => {
+  const cardInfo = [
+    {
+      title: "چرا برنامه",
+      description: "آشنایی بیشتر با برنامه و مزایای آن ",
+      link: "/docs/Introduction",
+      icon: <SvgNoteBook />
+    },
+    {
+      title: "شروع سریع",
+      description: "راهنمای سریع برای شروع کار با پروژه",
+      link: "/docs/QuickStart",
+      icon: <SvgFlame />
+    },
+      {
+          title: "معماری کلی",
+          description: "بررسی ساختار و معماری برنامه",
+          link: "/docs/ArchitectureOverview",
+          icon: <SvgLightbulb />
+        },
+    {
+      title: "پنل مدیریت",
+      description: "آشنایی با امکانات و تنظیمات پنل مدیریت",
+      link: "/docs/ManagementPanel",
+      icon: <SvgPanel />
+    },
+
+    {
+      title: "تست و دیباگ",
+      description: "برای اطمینان از عملکرد صحیح برنامه خود، از ابزار های دیباگ استفاده کنید",
+      link: "/docs/TestAndDebug",
+      icon: <SvgBug />
+    },
+    {
+      title: "سوالات متدوال",
+      description: "پاسخ به سوالات رایج کاربران",
+      link: "/docs/FAQ",
+      icon: <SvgQuestion />
+    }
+  ];
+  return (
+    <div className="info-card-grid">
+      {cardInfo.map((card, idx) => (
+        <InfoCard
+          key={idx}
+          title={card.title}
+          description={card.description}
+          icon={card.icon}
+          buttonText="بیشتر بدانید"
+          onButtonClick={() => window.location.href = card.link}
+        />
+      ))}
+    </div>
+  );
+})()}
