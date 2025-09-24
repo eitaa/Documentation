@@ -63,7 +63,7 @@ const config: Config = {
         docs: {
           sidebarPath: path.resolve(__dirname, './sidebars.ts'),
           editUrl:
-            'https://github.com/eitaa/Eitaa-Developer/tree/main/',
+            'https://github.com/eitaa/Documentation/tree/main/',
         },
         blog: {
           showReadingTime: true,
